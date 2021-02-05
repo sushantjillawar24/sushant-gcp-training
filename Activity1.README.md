@@ -26,11 +26,13 @@ Add high avaialbilty and scalabilty to the existing app deployed in compute engi
 
 Steps:
 
-1. Create two managed instance group and intance template with min. instance 1 and max. instance 3
-2. Create vm instance using instance template in zone us-centeal1-a
-3. Install nginx, On one instance keep the default html file and on another change the code 
-4. Create load balancer and add the 2 MIG as backends.
-5. Create another vm instance using different MIG in zone us-central1-b
+1. Create two managed instance group in zone us-central1-a and us-central1-b(sushant-instance-group and sushant-instance-group2)
+    and intance template with min. instance 1 and max. instance 3
+2. Create health check (sushant-health-check) while creating MIG
+3. Install nginx, On one instance
+4. Install nginx on second instance with different html file.
+3. Create load balancer (sushant-lb) and add the 2 created MIGs as backends.
+
 
 For scalibility:
 
@@ -42,6 +44,6 @@ For scalibility:
 For availability :
 
 1. As instances are already present in 2 different zones with nginx web-server installed
-2. Delete one of the instance in one zone
+2. Delete one of the instance group or load more traffic untill the max. no. of instances are created and utilized
 3. Now visiting the same ip again leds us to new vm in another zone.
 4. Thus having no downtime for the end user
