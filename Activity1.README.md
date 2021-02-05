@@ -33,12 +33,14 @@ Steps:
 
 For scalibility:
 
-i. Install nginx on one of instance created by MIG
-ii. Add python scrip and install tool named cpu limit
-iii. Run the python file
-iv. Then the cpu utiliaztion exceeds its limit and new vm get created 
+1. Install nginx on one of instance created by MIG
+2. Add python scrip and install tool named cpu limit
+3. Run the python file
+4. Then the cpu utiliaztion exceeds its limit and new vm get created 
 
 For availability :
 
-i. As instances are already present in 2 different zones with nginx web-server installed
-ii. Deleting one of the ngixn server from on 
+1. As instances are already present in 2 different zones with nginx web-server installed
+2. Delete one of the instance in one zone
+3. Now visiting the same ip again leds us to new vm in another zone.
+4. Thus having no downtime for the end user
