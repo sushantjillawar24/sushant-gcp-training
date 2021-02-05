@@ -28,8 +28,9 @@ Steps:
 
 1. Create two managed instance group and intance template with min. instance 1 and max. instance 3
 2. Create vm instance using instance template in zone us-centeal1-a
+3. Install nginx, On one instance keep the default html file and on another change the code 
 4. Create load balancer and add the 2 MIG as backends.
-3. Create another vm instance using different MIG in zone us-central1-b
+5. Create another vm instance using different MIG in zone us-central1-b
 
 For scalibility:
 
