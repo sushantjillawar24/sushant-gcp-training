@@ -1,1 +1,0 @@
-# sushant-gcp-training
