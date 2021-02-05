@@ -1,0 +1,15 @@
+resources:
+  - name: sushant-instance
+    type: compute.v1.instance
+    properties:
+      zone: us-central1-a
+      machineType: zones/us-central1-a/machineTypes/f1-micro
+      disk:
+      - deviceName: boot
+        type: PERSISTENT
+        boot: true
+        autodelete: true
+        initializeParams:
+          sourceImage: projects/debian-cloud/global/images/family/debian-10
+      networkInterfaces:
+      - network: global/networks/sushant-vpc
