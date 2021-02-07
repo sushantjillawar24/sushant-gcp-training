@@ -23,7 +23,25 @@ Used redis as backend service to store the entries.
 Activity 2.2 
 
 
+Enabling Autoscaling, High Availability
 
+1. Turn on the option of autoscaling while creating the cluster or use command 
+   kubectl scale deploymnet front-end --replicas=10   to scale fornt-end deployment 
+   
+2. Turn on Regional option while creating cluster and choose multiple zone to make it high available.
+
+Activity 2.3
+
+Perform Rolling update to above Deployment.
+
+
+1. Change image version of ,one of the container 
+2. Here redis-master 's image has been changed to redis:5.0
+3. Command used is kubectl set image deployment redis-master master=redis:5.0
+4. As rolling update is default 
+5. Now check the status by using command :
+   kubectl rollout status deployment redis-master.
+6. The output will show the process of updation.   
 
 
 
