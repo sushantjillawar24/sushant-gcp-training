@@ -7,7 +7,7 @@ Create VPN connection between two GCP custom mode VPC networks and test connecti
 2. Create 2 firewall in both the VPC
 3. Create vm instance in each (vm-1 , vm-2)
 4. Create static ip address (static-1 , static-2) in both project.
-5. Create vpn tunnel and getway in both the project.
+5. Create vpn tunnel and getway in both the project use classic VPN
    Note: Remote peer ip : Enter static ip of another project
          key : sushantkey
          Route-based : Ip range of other project vpc
